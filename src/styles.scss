@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+// /* You can add global styles to this file, and also import other style files */
+// @import '~bootstrap/scss/bootstrap';
+// @import "../node_modules/bootstrap/scss/functions";
+// @import "../node_modules/bootstrap/scss/variables";
+
+$custom-primary: #090C9B;
+$custom-secondary: #3066BE;
+$custom-dark: #3C3744;
+$custom-light: #FBFFF1;
+
+// $theme-colors: map-merge($theme-colors, (
+//     "primary": $primary,
+//     "seconday": $secondary,
+//     "dark": $dark,
+//     "light": $light
+// ));
+
+@import "bootstrap";

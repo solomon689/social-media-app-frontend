@@ -1,0 +1,23 @@
+@import '../../../../styles.scss';
+
+.bg-primary {
+    background-color: #090C9B !important;
+}
+
+.navbar a {
+    color: $custom-light;
+
+    &:hover {
+        opacity: .8;
+        transition: all ease 300ms;
+    }
+}
+
+.active {
+    color: $custom-light !important;
+    opacity: .5 !important;
+}
+
+.uil {
+    font-size: 1.7rem;
+}

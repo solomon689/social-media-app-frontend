@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg bg-primary justify-content-between">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="d-flex justify-content-center align-items-center w-100" style="height: 50px;">
+                <ul class="navbar-nav mx-auto flex-grow-0">
+                    <li class="nav-item ps-3 pe-3" *ngFor="let option of options">
+                        <a class="nav-link" href="#" [title]="option.description">
+                            <i [class]="option.icon"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="navbar-text flex-grow-0 pe-3">
+                    <a class="nav-link">
+                        <i class="uil uil-user-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
