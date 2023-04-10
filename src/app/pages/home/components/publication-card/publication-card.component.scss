@@ -40,3 +40,14 @@
         }
     }
 }
+
+.profile-link {
+    text-decoration: none;
+    color: #000;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        opacity: 0.7;
+    }
+}
