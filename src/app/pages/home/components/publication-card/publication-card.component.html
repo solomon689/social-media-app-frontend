@@ -1,0 +1,30 @@
+<div class="card w-100 shadow-sm">
+    <div class="card-body">
+        <div class="row justify-content-center align-items-center border">
+            <div class="col-lg-1">
+                <div class="avatar-wrapper">
+                    <img src="https://avatars.githubusercontent.com/u/55674968?v=4" alt="">
+                    <div class="superposition"></div>
+                </div>
+            </div>
+            <div class="col-lg-10">
+                <h5 class="align-middle">Nombre del usuario</h5>
+            </div>
+            <div class="col-lg-1">
+                <app-publication-options></app-publication-options>
+            </div>
+        </div>
+        <p class="card-text mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magnam ad cupiditate animi harum atque ratione eaque. Deserunt explicabo quam laborum facere exercitationem eligendi corporis? Odit accusantium odio eveniet rem.</p>
+        <img src="https://rdironworks.com/wp-content/uploads/2017/12/dummy-200x200.png" class="card-img-top" alt="..." height="500">
+    </div>
+    <div class="card-footer text-muted">
+        <div class="row">
+            <div class="col-lg-4 rounded-2 p-1" *ngFor="let option of options">
+                <span class="d-flex justify-content-center align-items-center">
+                    <i [class]="option.icon"></i>
+                    {{ option.name }}
+                </span>            
+            </div>
+        </div>
+    </div>
+</div>

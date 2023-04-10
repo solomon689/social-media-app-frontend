@@ -17,6 +17,9 @@ $custom-light: #FBFFF1;
 
 @import "bootstrap";
 
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
 body {
     background-color: #f2f2f2;
 }
