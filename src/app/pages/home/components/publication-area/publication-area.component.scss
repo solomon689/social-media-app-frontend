@@ -5,20 +5,36 @@
 
     &:hover {
         opacity: 1;
-        transition: all ease 300ms;
+        transition: all ease 200ms;
     }
 }
 
 .avatar-wrapper {
+    position: relative;
+    
     img {
+        display: block;
         width: 45px;
         height: 40px;
         border-radius: 50%;
         object-fit: cover;
+    }
 
-        &:hover {
-            cursor: pointer;
-        }
+    .superposition {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(134, 134, 134, 0.5);
+        opacity: 0;
+        transition: opacity 200ms ease-in-out;
+        border-radius: 50%;
+    }
+
+    &:hover .superposition {
+        opacity: 1;
+        cursor: pointer;
     }
 }
 
@@ -29,5 +45,16 @@
 .upload-image {
     &:hover {
         cursor: pointer;
+    }
+}
+
+.additional-options-wrapper {
+    span {
+        border-radius: 1rem;
+
+        &:hover {
+            background-color: #e2e2e2;
+            transition: background-color 200ms ease-in-out;    
+        }
     }
 }

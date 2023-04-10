@@ -21,3 +21,16 @@
 .uil {
     font-size: 1.7rem;
 }
+
+.avatar-wrapper {
+    img {
+        width: 45px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
