@@ -1,1 +1,90 @@
-<p>register works!</p>
+<div class="d-flex justify-content-center align-items-center pt-3">
+    <div class="card w-50 shadow">
+        <div class="card-body p-4">
+            <h3 class="mb-3">Registro</h3>
+            <hr>
+            <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+                <div class="row">
+                    <div class="col-lg-6 mb-3">
+                        <label for="name" class="form-label fw-bold">Nombres</label>
+                        <input type="text" class="form-control" name="name" placeholder="Juan Ignacio" formControlName="name" [class]="isValidField('name')">
+
+                        <div class="invalid-feedback">
+                            <span *ngIf="registerForm.get('name')?.errors?.['required']">
+                                Por favor ingrese su(s) nombre(s).
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3">
+                        <label for="lastname" class="form-label fw-bold">Apellidos</label>
+                        <input type="text" class="form-control" name="lastname" placeholder="Lopez Zamora" formControlName="lastname" [class]="isValidField('lastname')">
+
+                        <div class="invalid-feedback">
+                            <span *ngIf="registerForm.get('lastname')?.errors?.['required']">
+                                Por favor ingrese su(s) apellido(s).
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 mb-3">
+                        <label for="email" class="form-label fw-bold">Correo Electrónico</label>
+                        <input type="email" class="form-control" name="email" placeholder="ejemplo@gmail.com" formControlName="email" [class]="isValidField('email')">
+
+                        <div class="invalid-feedback">
+                            <span *ngIf="registerForm.get('email')?.errors?.['required']">
+                                Por favor ingrese su correo electrónico.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 mb-3">
+                        <label for="prefix" class="form-label fw-bold">Código</label>
+                        <input type="text" class="form-control" name="prefix" readonly value="+569">
+                    </div>
+                    <div class="col-lg-10 mb-3">
+                        <label for="phoneNumber" class="form-label fw-bold">Número de celular</label>
+                        <input type="tel" class="form-control" name="phoneNumber" placeholder="9 5069 9481" formControlName="phoneNumber" [class]="isValidField('phoneNumber')">
+
+                        <div class="invalid-feedback">
+                            <span *ngIf="registerForm.get('phoneNumber')?.errors?.['required']">
+                                Por favor ingrese su número de celular.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 mb-3">
+                        <label for="password" class="form-label fw-bold">Contraseña</label>
+                        <input type="password" class="form-control" name="password" placeholder="**********************" formControlName="password" [class]="isValidField('password')">
+
+                        <div class="invalid-feedback">
+                            <span *ngIf="registerForm.get('password')?.errors?.['required']">
+                                Por favor ingrese su contraseña.
+                            </span>
+                            <span *ngIf="registerForm.get('password')?.errors?.['minlength']">
+                                La contraseña debe tener al menos 8 carácteres.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 mb-4">
+                        <label for="repeatPassword" class="form-label fw-bold">Repita la Contraseña</label>
+                        <input type="password" class="form-control" name="repeatPassword" placeholder="**********************" formControlName="repeatPassword" [class]="isValidField('repeatPassword')">
+
+                        <div class="invalid-feedback">
+                            <span *ngIf="registerForm.get('repeatPassword')?.errors?.['required']">
+                                Por favor ingrese vuelva a ingresar su contraseña.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 mb-3">
+                        <label for="profileImg" class="form-label fw-bold">Imágen de Perfil</label>
+                        <input class="form-control" type="file" id="profileImg" formControlName="avatar" [class]="isValidField('avatar')">
+                    </div>
+                    <div class="col-lg-12 mb-3">
+                        <label for="coverImg" class="form-label fw-bold">Imágen de Portada</label>
+                        <input class="form-control" type="file" id="coverImg" formControlName="cover" [class]="isValidField('cover')">
+                    </div>
+                    <div class="col-lg-12 mb-1 d-grid">
+                        <button type="submit" class="btn btn-success btn-lg">Completar Registro</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
